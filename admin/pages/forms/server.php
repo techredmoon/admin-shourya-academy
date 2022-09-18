@@ -1,5 +1,5 @@
 <?php
-    $target_dir = "C:/xampp/htdocs/shourya-academy/static/images/result/";
+    $target_dir = "https://dev.shouryaacademyedu.com/static/images/upload/result-photo/";
     $uploadOk = 1;
     $errors = array(); 
     $result_title = '';
@@ -14,7 +14,7 @@
     // Check if image file is a actual image or fake image
     $filename = $_FILES["img"]["name"]; 
     $tempname = $_FILES["img"]["tmp_name"];     
-    $folder = "uploads/".$filename; 
+    //$folder = "uploads/".$filename; 
 
     
     //echo $target_file."\n";
@@ -62,7 +62,7 @@
 
     } else {
         if (move_uploaded_file($_FILES["img"]["tmp_name"], $target_file)) {
-            include('../Admin/admin/template/connection.php');
+            include('https://admin.shouryaacademyedu.com/admin/connection.php');
             $result = mysqli_query($db, $query);
             if($result){
                 array_push($errors, "The file has been uploaded.");
