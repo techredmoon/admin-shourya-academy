@@ -1,5 +1,5 @@
 <?php
-    $target_dir = "https://dev.shouryaacademyedu.com/static/images/upload/result-photo/";
+    $target_dir = "http://dev.shouryaacademyedu.com/static/images/upload/result-photo/";
     $uploadOk = 1;
     $errors = array(); 
     $result_title = '';
@@ -24,7 +24,7 @@
           
     $query = "INSERT INTO t_result_photo (`res_photo_title`, `res_photo_img`, `res_photo_desc`) VALUES ('$result_title', '$filename', '$result_desc')"; 
 
-    echo $query;
+    //echo $query;
     //   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
     //   if($check !== false) {
     //     echo "File is an image - " . $check["mime"] . ".";
